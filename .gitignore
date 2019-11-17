@@ -106,4 +106,4 @@ venv.bak/
 # files
 publickey.key
 symmetric.key
-privkey.key
+privatekey.key
