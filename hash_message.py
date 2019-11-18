@@ -12,7 +12,7 @@ def file_open(file):
 
 
 # Open private key file and load in key
-privkey = rsa.PrivateKey.load_pkcs1(file_open('privkey.key'))
+privkey = rsa.PrivateKey.load_pkcs1(file_open('privatekey.key'))
 
 # Open the secret message file and return data to variable
 message = file_open('message')
