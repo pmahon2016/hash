@@ -9,6 +9,9 @@ cipher = Fernet(key)
 # create the cipher
 cipher = Fernet(key)
 
+with open('symmetric_key','wb') as k:
+    skey = k.write(key)
+
 # open file for encrypting
 myfile = open('mysecretdata','rb')
 myfiledata= myfile.read()

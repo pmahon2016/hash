@@ -105,5 +105,7 @@ venv.bak/
 
 # files
 publickey.key
-symmetric.key
+symmetric_key
 privatekey.key
+signature_file
+

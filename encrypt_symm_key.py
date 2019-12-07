@@ -1,5 +1,3 @@
-# This file signs a file with the owner's private key and
-# verifies the signature with the owners public key
 import rsa
 
 
@@ -15,20 +13,13 @@ def file_open(file):
 privkey = rsa.PrivateKey.load_pkcs1(file_open('privatekey.key'))
 
 # Open the secret message file and return data to variable
-message = file_open('message')
+message = file_open('symmetric_key','wb')
 hash_value = rsa.compute_hash(message, 'SHA-512')  # optional
-
-
 
 # Sign the message with the owners private key
 signature = rsa.sign(message, privkey, 'SHA-256')
 
-s = open('signature_file','wb')
-s.write(signature)
 
 
-print(signature)
-print(len(signature))
 
-print(len(hash_value) * 8)  # to verify size of hash/output
 
