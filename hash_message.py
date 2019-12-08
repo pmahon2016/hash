@@ -21,7 +21,7 @@ hash_value = rsa.compute_hash(message, 'SHA-512')  # optional
 
 
 # Sign the message with the owners private key
-signature = rsa.sign(message, privkey, 'SHA-256')
+signature = rsa.sign(message, privkey, 'SHA-512')
 
 s = open('signature_file','wb')
 s.write(signature)
